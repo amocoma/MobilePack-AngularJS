@@ -30,13 +30,14 @@ app.configure('development', function () {
 
 var client_id = process.env.client_id;
 var app_url = process.env.app_url;
+var immediate = true;
 
 
 app.get('/', function (req, res) {
-    res.render("index", { client_id: client_id, app_url: app_url});
+    res.render("index", { client_id: client_id, app_url: app_url, immediate: immediate});
 });
 app.get('/index.html', function (req, res) {
-    res.render("index", { client_id: client_id, app_url: app_url});
+    res.render("index", { client_id: client_id, app_url: app_url, immediate: immediate});
 });
 
 
